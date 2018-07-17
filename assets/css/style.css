@@ -1,0 +1,223 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    background: #000000;
+    font-family: 'Slackey', cursive;
+    font-size: 60px;
+
+}
+
+#phraseMeaning {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px;
+    width: 50%;
+}
+
+#startMenu {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#menuButtonContainer {
+    position: relative;
+    width: 500px;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.menuButton {
+    margin: 20px;
+    height: auto;
+    width: 500px;
+    background: #b25c00;
+    border: 5px solid #007cb2;
+    border-radius: 25px;
+    color: #ffffff;
+    font-family: 'Slackey', cursive;
+    font-size: 60px;
+    transition: background-color 0.5s ease;
+}
+
+.menuButton:hover {
+    background: #492a08;
+}
+
+.menuButton:focus {
+    outline: none;
+}
+
+#instructionsArticle {
+    width: auto;
+    background: none !important;
+    border: none;
+    font-size: 20px;
+    text-align: left;
+}
+
+#gameMasterContainer {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    color: #6d492a;
+    font-family: 'Special Elite', cursive;
+    font-size:50px;
+    transform: rotate(-6deg);
+}
+
+#titleBanner {
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    transform: rotate(3deg);
+}
+
+#headerbg {
+    width: 500px;
+    height: 200px;
+    border-radius: 15px;
+    border: 5px solid #2d1f12;
+}
+
+#titleText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#deepBlueSea {
+    background-color: #1fbbd0;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+}
+
+.oceanWaves {
+    width: 120%;
+    height: 20vh;
+    transform: scaleX(1.2);
+    top: 60vh;
+    position: fixed;
+}
+
+#topWave {
+    z-index: -3000;
+}
+
+#bottomWave {
+    z-index: 1000;
+}
+
+#pirateShipContainer {
+    position: absolute;
+    right: 0;
+    top: -170px;
+}
+
+#pirateShip {
+    position: absolute;
+    right: 0;
+}
+
+#pirateShipImage {
+    position: relative;
+    z-index: -1000;
+}
+
+#plank {
+    background: #703d00;
+    border: 2px solid #000000;
+    height: 30px;
+    width: 40vw;
+    position: absolute;
+    top: 540px;
+    left: -39vw;
+    transform: skewX(35deg);
+
+}
+
+#captain {
+    position: absolute;
+    top: 350px;
+    left: 40px;
+}
+
+#playerContainer {
+    position: absolute;
+    width: 100%;
+    top: -140px;
+    transform: skewX(-35deg);
+    transform-origin: 100% 100%;
+}
+
+#player {
+    position: relative;
+    left: 30vw;
+    z-index: 5000;
+}
+
+#gameDisplayContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+#gameDisplayArea {
+    color: #ffffff;
+    padding: 30px;
+    transform: skewX(45deg);
+    margin: 0 auto;
+    width: 75%;
+    height: 40vh;
+    display: inline-block;
+    text-align: center;
+    padding-top: 90px;
+}
+
+#wrongLettersDisplay {
+    width: 40%;
+    float: left;
+    height: 300px;
+}
+
+#hiddenPhraseDisplay {
+    width: 40%;
+    height: 300px;
+    float: left;
+    font-size: 50px;
+}
+
+#displayBreak {
+    width: 20%;
+    float: left;
+    height: 400px;
+}
+
+#wrongLettersDisplay > p {
+    text-align: right;
+    transform: skewX(-45deg);
+    letter-spacing: 20px;
+    font-size: 35px;
+    color: #ff0000;
+}
+
+#hiddenPhraseDisplay > p {
+    text-align: justify;
+    letter-spacing: 5px;
+    transform: skewX(-45deg);
+}
+
+.hiddenLetter {
+    position: absolute;
+}

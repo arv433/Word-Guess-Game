@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Slackey|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Pirate Word Guess!</title>
+</head>
+
+<body>
+    <div id="startMenu">
+        <div id="titleBanner">
+            <img src="assets/images/darkwood.png" alt="HeaderBG" id="headerbg">
+            <div id="titleText">
+                <h1>Pirate Word Guess</h1>
+            </div>
+        </div>
+        <div id="menuButtonContainer">
+            <button id="startGameButton" class="menuButton" onclick="game.gameScreen.initializeGame()">Start</button>
+            <button id="instructionsButton" class="menuButton" onclick="game.startMenuScreen.showInstructions()">Instructions</button>
+        </div>
+    </div>
+
+    <div id="gameMasterContainer">
+        <audio src="assets/audio/tomfoolery.mp3" id="tomfooleryMP3" loop></audio>
+        <audio src="assets/audio/twelfthStRag.mp3" id="twelfthStRagMP3"></audio>
+        <div id="phraseMeaning"></div>
+        <div id="deepBlueSea">
+            <div id="pirateShipContainer">
+                <div id="pirateShip">
+                    <img src="assets/images/pirateShip.png" alt="pirateShip" id="pirateShipImage">
+                    <img src="assets/images/pirateCaptain.png" alt="pirateCaptain" id="captain">
+                    <div id="plank">
+                        <div id="playerContainer">
+                            <img src="assets/images/victim.png" alt="mainCharacter" id="player">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gameDisplayContainer">
+                <div id="gameDisplayArea">
+                    <div id="wrongLettersDisplay">
+                        <p>
+                        </p>
+                    </div>
+                    <div id="displayBreak"></div>
+                    <div id="hiddenPhraseDisplay">
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/oceanwaves.png" alt="Waves" class="oceanWaves" id="topWave">
+        <img src="assets/images/oceanwaves.png" alt="Waves" class="oceanWaves" id="bottomWave">
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
