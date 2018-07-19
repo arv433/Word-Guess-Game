@@ -170,11 +170,8 @@ var game = {
                 var tryAgain = confirm("Try again?");
                 if (tryAgain) {
                     game.gameScreen.reset();
-                    game.gameScreen.initializeGame();
                 } else {
-                    mainSong.pause();
                     game.gameScreen.reset();
-                    game.selectScreen(startMenu);
                 };
             }, 500);
         },
@@ -187,33 +184,20 @@ var game = {
                 var tryAgain = confirm("Try again?");
                 if (tryAgain) {
                     game.gameScreen.reset();
-                    game.gameScreen.initializeGame();
                 } else {
-                    winningSong.pause();
                     game.gameScreen.reset();
-                    game.selectScreen(startMenu);
+                    winningSong.pause();
                 };
             }, 50);
         },
 
         reset: function () {
-            /* cancelAnimationFrame(game.gameScreen.animate);
-            mainSong.currentTime = 0;
-            winningSong.currentTime = 0;
-            incorrectLettersArray = [];
-            incorrectLettersString = "";
-            anglePlayer = 0.8;
-            playerPosition = 0;
-            playerYPosition = 0;
-            wrongLettersDisplay.innerHTML = ""; */
             location.reload();
-            this.initializeGame();
-
         },
 
         initializeGame: function () {
-            phraseDefHiddenPhrase = this.getPhraseDefHiddenPhrase()
             game.selectScreen(gameMasterContainer);
+            phraseDefHiddenPhrase = this.getPhraseDefHiddenPhrase()
             hiddenPhraseDisplay.innerHTML = phraseDefHiddenPhrase[2];
             requestAnimationFrame(game.gameScreen.animate);
             inputReady = true;
