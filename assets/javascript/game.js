@@ -98,6 +98,7 @@ var game = {
         })
     },
 
+    // the startMenuScreen object holds all functions that pertain to the start menu, not the game
     startMenuScreen: {
         initializeStartMenu: function () {
             game.selectScreen(startMenu);
@@ -107,14 +108,16 @@ var game = {
         }
     },
 
+    // the gameScreen object holds all functions that occur in-game
     gameScreen: {
         getPhraseDefHiddenPhrase: function () {
             // returns an array of the original phrase, its definition, and the hidden version of the phrase
             var wordArray = wordList[Math.floor(wordList.length * Math.random())];
             return wordArray.concat(this.hidePhrase(wordArray[0]));
         },
-
+    
         hidePhrase: function (inputPhrase) {
+            // returns the hidden version of the phrase and adds it to defHiddenPhrase and is mutated when the player guesses a letter
             var outputPhrase = "";
             for (let i = 0; i < inputPhrase.length; i++) {
                 if (/[a-z]/i.test(inputPhrase[i])) {
@@ -127,6 +130,7 @@ var game = {
         },
 
         animate: function (time) {
+            // this function creates the constant and unconditional animations of the game which includes the sinusoidal movements of the waves and the ship
             if (lastTime != null) angle += (time = lastTime) * 0.00005;
             lastTime = time;
             topWave.style.top = (Math.sin(angle) * 1.5) + 48 + "vh";
@@ -140,6 +144,7 @@ var game = {
         },
 
         movePlayerForward: function (newPosition) {
+            // this animation moves the victim character forward on the plank and occurs only when the players guesses the wrong letter
             var id = setInterval(frame, 20);
             function frame() {
                 if (playerPosition == newPosition) {
@@ -152,6 +157,7 @@ var game = {
         },
 
         fallOffPlank: function () {
+            // this animation occurs when the player makes ten guesses and loses the game
             var id = setInterval(frame, 20);
             function frame() {
                 if (playerYPosition == 100) {
@@ -237,6 +243,7 @@ var game = {
         },
 
         findAndSwitchLetters: function (letter) {
+            // this function searches the original word for the occurences of the player's input letter
             var pos = 0;
             var j = -1;
             var newString = "";
@@ -251,6 +258,7 @@ var game = {
     }
 };
 
+// function calls and event listener
 game.startMenuScreen.initializeStartMenu();
 document.onkeyup = function (event) {
     if (inputReady) {

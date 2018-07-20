@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- The following div only shows in the beginning of the game -->
     <div id="startMenu">
         <div id="titleBanner">
             <img src="assets/images/darkwood.png" alt="HeaderBG" id="headerbg">
@@ -23,10 +24,12 @@
             <button id="instructionsButton" class="menuButton" onclick="game.startMenuScreen.showInstructions()">Instructions</button>
         </div>
     </div>
-
+    <!-- This is the main application -->
     <div id="gameMasterContainer">
+        <!-- These audio files only play conditionally -->
         <audio src="assets/audio/tomfoolery.mp3" id="tomfooleryMP3" loop></audio>
         <audio src="assets/audio/twelfthStRag.mp3" id="twelfthStRagMP3"></audio>
+        <!-- phraseMeaning div is where the hint is shown -->
         <div id="phraseMeaning"></div>
         <div id="deepBlueSea">
             <div id="pirateShipContainer">
@@ -40,6 +43,7 @@
                     </div>
                 </div>
             </div>
+            <!-- The following divs are where most of the game information is displayed -->
             <div id="gameDisplayContainer">
                 <div id="gameDisplayArea">
                     <div id="wrongLettersDisplay">
