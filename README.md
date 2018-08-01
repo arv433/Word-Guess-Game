@@ -6,6 +6,8 @@ Hit start, and press any letters on your keyboard to guess the hidden word with 
 
 Please note of a bug on Google Chrome that sometimes cuts the audio short upon winning the game
 
+![Game Screenshot](assets/images/gameplayScreenshot.png)
+
 Created by Arvin Zojaji
 
 Enjoy!
